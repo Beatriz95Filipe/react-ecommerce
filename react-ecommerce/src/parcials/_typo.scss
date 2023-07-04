@@ -1,0 +1,239 @@
+@import '../parciais/mixins';
+@import '../parciais/colors';
+
+@font-face {
+	font-family: "WhyteInktrap-Book" ;
+	src: url('/2-1-loja/assets/fonts/WhyteInktrap-Book.woff2');
+}
+
+a {
+	@include fontSize(1);
+	font-family: "WhyteInktrap-Book";
+	text-decoration: none;
+	color: black;
+	&:hover {
+		cursor: pointer;
+	}
+
+	&.feat_product_shop{
+		@include fontSize(0.8);
+		font-weight: bold;
+	}
+
+	&.footer__list{
+		color: white;
+		line-height: 2;
+	}
+
+	&.site__links{
+		@include fontSize(0.7);
+		color: white;
+	}
+}
+
+
+p {
+	@include fontSize(1);
+	font-family: "WhyteInktrap-Book";
+	color: black;
+
+	&.splash__slogan{
+		@include fontSize(2);
+		color: white;
+		margin-bottom: 1rem;
+	}
+
+	&.slogan{
+		@include fontSize(2.5);
+		padding: 80px 0 40px;
+		text-align: center;
+		&__video{
+			@include fontSize(2.5);
+			padding: 0 8px 40px;
+			text-align: left;
+		}
+	}
+
+	&.info__item__text{
+		@include fontSize(0.8);
+	}
+
+	&.feat__product{
+		&__name{
+			@include fontSize(0.8);
+			font-style: italic;
+			text-decoration: underline;
+			text-transform: uppercase;
+			letter-spacing: 0.5rem;
+			padding: 1rem 0.5rem 1rem;
+		}
+		&__description{
+			@include fontSize(1.5);
+			font-style: italic;
+			padding: 1rem 0.5rem 1rem;
+			line-height: 1.5;
+			span{
+			font-weight: bold;
+			}
+		}
+	}
+
+	&.category__title{
+		@include fontSize(2.5);
+		padding: 20px 16px 20px;
+	}
+
+	&.category__info{
+		padding: 20px 16px 20px;
+		max-width: 450px;
+		line-height: 1.5;
+	}
+
+	&.category__product{
+		&__text{
+			font-weight: bold;
+			padding: 12px 0 8px;
+		}
+		&__price{
+			@include fontSize(0.8);
+			color: $bg-grey;
+		}
+	}
+
+	&.product__title{
+		font-weight: bold;
+		text-align: left;
+		padding: 20px 16px 20px;
+	}
+
+	&.choosen{
+		&__product__name{
+			@include fontSize(2);
+		}
+		&__product__price{
+			@include fontSize(1.2);
+			padding: 15px 0 15px;
+		}
+		&__color{
+			padding: 10px 0 10px;
+			font-weight: bold;
+		}
+	}
+
+	&.choices{
+		padding: 10px 0 10px;
+		font-weight: bold;
+	}
+
+	&.about{
+		@include fontSize(1.4);
+		padding: 0 8px 20px;
+		line-height: 1.5;
+		&__title{
+			@include fontSize(2);
+			padding: 40px 8px 40px;
+			&__key{
+				@include fontSize(2);
+				padding: 40px 8px 40px;
+			}
+			&__s{
+				@include fontSize(1.2);
+				padding: 8px 0 8px;
+				font-weight: bold;
+			}
+		}
+		&__s{
+			@include fontSize(1.2);
+			line-height: 1.5;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+    p{
+		&.splash__slogan {
+			@include fontSize(1.5);
+		}
+		&.slogan{
+			@include fontSize(1.5);
+		}
+		&.feat__product{
+			&__description{
+				@include fontSize(1.2);
+			}
+		}
+		&.about__title__key{
+			text-align: center;
+		}
+	}
+}
+
+.btn__shop, .btn__subscribe, .btn__more, .btn__cart{
+	@include fontSize(1);
+	font-family: "WhyteInktrap-Book";
+	color: black;
+	text-transform: uppercase;
+}
+
+.subscribe{
+ 	input{
+		color: $bg-bege;
+		&::placeholder{
+			color: $bg-bege;
+			text-transform: capitalize;
+			font-size: 0.8rem;
+			text-align: center;
+		}
+ 	}
+}
+
+li{
+	@include fontSize(1);
+	font-family: "WhyteInktrap-Book";
+	color: white;
+	line-height: 2;
+	&.title{
+		font-weight: bold;
+	}
+}
+
+.footer__end{
+	p{
+		@include fontSize(0.7);
+		color: white;
+	}
+	span{
+		@include fontSize(0.7);
+		color: white;
+	}
+}
+
+label.color{
+	@include fontSize(1);
+	font-family: "WhyteInktrap-Book";
+	color: black;
+}
+
+.dimensions{
+    .col-lg-5{
+        th, td{
+			@include fontSize(1);
+            font-family: "WhyteInktrap-Book";
+			color: $check-grey;
+			text-align: left;
+			line-height: 2;
+        }
+    }
+}
+
+.upgrade__check{
+	label{
+		@include fontSize(1);
+		font-family: "WhyteInktrap-Book";
+		color: $check-grey;
+		margin-left: 5px;
+	}
+	input:checked + label{
+		color: black;
+	}
+}
