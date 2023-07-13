@@ -1,21 +1,25 @@
-import { useState } from 'react'
-import './App.css'
+import { useEffect, useState } from "react";
+import Homepage from "./routes/Homepage/Homepage";
+import CategoryPage from "./routes/CategoryPage/CategoryPage";
+import ProductPage from "./routes/ProductPage/ProductPage";
+import "./styles.scss";
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const [route, setRoute] = useState("homepage");
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const page = urlParams.get("page");
+    if (page) setRoute(page);
+  }, []);
+
+  //para criarmos rotas, usamos uma biblioteca externa "react-router-dom"
 
   return (
-    <>
-      <div>
-        <p>olá mundo</p>
-      </div>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-    </>
-  )
+    <div className="App">
+      <Homepage />
+      <CategoryPage />
+      <ProductPage />
+    </div>
+  );
 }
-
-export default App
