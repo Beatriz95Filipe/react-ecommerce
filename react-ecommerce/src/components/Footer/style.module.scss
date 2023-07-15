@@ -1,0 +1,25 @@
+@import '/src/shared/colors';
+@import '/src/shared/typo';
+@import '/src/shared/mixins';
+
+.footer{
+    background-color: $bg-dark;
+    padding-top: 40px;
+    &__list{
+        padding: 40px 0 40px;
+    }
+}
+
+.footer__end {
+    padding: 0 8px 20px;
+	@include flex(space-between, flex-start);
+}
+
+@media screen and (max-width: 768px) {
+	.footer__end{
+        flex-wrap: wrap;
+        .adress{
+            padding: 20px 0 0;
+        }
+    }
+}
