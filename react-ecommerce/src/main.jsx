@@ -24,7 +24,7 @@ const router = createBrowserRouter([
         element: <CategoryPage />,
         // children: [
         //   {
-        //     path: "/users/:userId",
+        //     path: "/category/:choosenCategory",
         //     element: <UserDetails />
         //   }
         // ]

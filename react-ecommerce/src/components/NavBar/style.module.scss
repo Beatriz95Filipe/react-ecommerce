@@ -1,0 +1,98 @@
+@import '/src/shared/colors';
+@import '/src/shared/typo';
+@import '/src/shared/mixins';
+
+
+$logoHeight: 40px;
+
+.nav {
+    @include flex(space-between, center);
+    box-sizing: border-box;
+    padding: 0 20px;
+
+    &__logo__main {
+        img {
+            height: $logoHeight;
+        }
+    }
+
+    &__menu__main {
+        display: flex;
+        box-sizing: border-box;
+        gap: 50px;
+
+        .menu__item{
+
+            &__label{
+                &:hover{
+                    color: gray;
+                }
+            }
+
+            &__dropdown{
+                display: none;
+                position: absolute;
+                background-color: red;
+                min-height: 200px;
+                z-index: 1;
+                a{
+                    display: block;
+                    text-decoration: none;
+                }
+                &:hover{
+                    display: block;
+                    background-color: blue;
+                }
+            }    
+        }
+
+    }
+}
+
+.nav__logo{
+    display: inline-block;
+    position: absolute;
+    img {
+        height: $logoHeight;
+    }
+}
+
+.nav__menu{
+    @include flex(center, center);
+    box-sizing: border-box;
+    padding: 15px 0 20px;
+    gap: 50px;
+    .menu__item{
+
+        &__label{
+            &:hover{
+                color: gray;
+            }
+        }
+
+
+        &__dropdown{
+            display: none;
+            position: absolute;
+            background-color: red;
+            min-height: 200px;
+            z-index: 1;
+            a{
+                display: block;
+                text-decoration: none;
+            }
+            &:hover{
+                display: block;
+                background-color: blue;
+            }
+        }    
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav__menu__main, .nav__menu{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+	}
+}
