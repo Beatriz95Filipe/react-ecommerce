@@ -8,10 +8,10 @@ import "/src/shared/_buttons.scss";
 const Splash = () => {
     return(
         <section className={`${style.splash} ${"container--fluid"}`}>
-            <img src="/src/assets/homepage/02-splash-screen.webp" alt="splash-image" />
+            <img src="/src/assets/homepage/01-splash-screen.webp" alt="splash-image" />
             <div className={style.splash__items}>
                 <p className={style.splash__slogan}>Clever designs, delivered free</p>
-                <button className={"btn__shop"}>SHOP BEDROOM</button>
+                <button className={"btn__shop"}>SHOP LIVING ROOM</button>
             </div>
         </section>
     );
