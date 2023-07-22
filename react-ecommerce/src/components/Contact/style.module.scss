@@ -1,0 +1,46 @@
+@import '/src/shared/colors';
+@import '/src/shared/typo';
+@import '/src/shared/mixins';
+@import '/src/shared/buttons';
+
+.contact{
+    background-color: $bg-grey;
+    margin-top: 40px;
+    padding: 40px 8px 40px;
+    @include flex(space-between, center);
+}
+
+.subscribe{
+    @include flex(space-between, center);
+    border: 1.5px solid $bg-bege;
+    border-radius: 4px;
+    input {
+        background-color: $bg-grey;
+        border: none;
+        outline: none;
+        width: 250px;
+        padding: 12px 8px 12px;
+    }
+}
+
+.socials{
+    display: flex;
+    gap: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    .subscribe{
+        @include flex(space-between, center);
+        flex-wrap: wrap;
+        border: none;
+        width: 100%;
+    }
+    input{
+        border: 1.5px solid $bg-bege;
+        border-radius: 4px;
+        width: 100%;
+    }
+    .socials{
+        display: none;
+    }
+}

@@ -1,0 +1,280 @@
+@import '/src/shared/colors';
+@import '/src/shared/typo';
+@import '/src/shared/grid';
+@import '/src/shared/mixins';
+
+.choosen__product__color{
+
+    label.color {
+        display: none;
+    }
+
+    input{
+        appearance: none;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        border: none;
+        margin: 0 5px 10px;
+        cursor: pointer;
+
+        &#navy_blue{
+            background-color: $p-color-navy;
+        }
+        &#leaf{
+            background-color: $p-color-leaf;
+        }
+        &#red_wine{
+            background-color: $p-color-wine;
+        }
+        &#night{
+            background-color: $p-color-night;
+        }
+        &#light_grey{
+            background-color: $p-color-light-grey;
+        }
+
+        &:checked{
+            border: 3px solid $bg-lime;
+        }
+
+        &:checked + label.color {
+            display: inline-block;
+        }
+    }
+}
+
+.styles{
+    @include flex(space-between, flex-start);
+    &__choices{
+        @include flex(flex-start, flex-start);
+        gap: 2px;
+    }
+}
+
+.arm__round{
+    display: inline-block;
+    position: relative;
+
+    input{
+        position: relative;
+        appearance: none;
+        width: 20px;
+        height: 30px;
+        border: none;
+        padding: 0;
+        margin: 0;
+        z-index: 1;
+        &:checked{
+            display: inline-block;
+            width: 20px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid $check-grey;
+            padding: 0;
+            margin: 0;
+            z-index: 1;
+        }
+    }
+    &__icon{
+        position: relative;
+        top: -30px;
+        left: 5px;
+        width: 10px;
+        height: 20px;
+        border-top-right-radius: 50%;
+        border-top-left-radius: 50%;
+        background-color: $check-grey;
+        border: 1px solid $check-light-grey;
+    }
+}
+
+.arm__fillet{
+    display: inline-block;
+    position: relative;
+
+    input{
+        position: relative;
+        appearance: none;
+        width: 20px;
+        height: 30px;
+        border: none;
+        padding: 0;
+        margin: 0;
+        z-index: 1;
+        &:checked{
+            display: inline-block;
+            width: 20px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid $check-grey;
+            padding: 0;
+            margin: 0;
+            z-index: 1;
+        }
+    }
+    &__icon{
+        position: relative;
+        top: -30px;
+        left: 5px;
+        width: 10px;
+        height: 20px;
+        border-top-right-radius: 30%;
+        border-top-left-radius: 30%;
+        background-color: $check-grey;
+        border: 1px solid $check-light-grey;
+    }
+}
+
+.cushion__flat{
+    display: inline-block;
+    position: relative;
+
+    input{
+        position: relative;
+        appearance: none;
+        width: 35px;
+        height: 30px;
+        border: none;
+        padding: 0;
+        margin: 0;
+        z-index: 1;
+        &:checked{
+            display: inline-block;
+            width: 35px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid $check-grey;
+            padding: 0;
+            margin: 0;
+            z-index: 1;
+        }
+    }
+    &__icon{
+        position: relative;
+        top: -25px;
+        left: 7px;
+        width: 20px;
+        height: 15px;
+        border-radius: 2px;
+        background-color: $check-grey;
+        border: 1px solid $check-light-grey;
+    }
+}
+
+.cushion__nail{
+    display: inline-block;
+    position: relative;
+
+    input{
+        position: relative;
+        appearance: none;
+        width: 35px;
+        height: 30px;
+        border: none;
+        padding: 0;
+        margin: 0;
+        z-index: 2;
+        &:checked{
+            display: inline-block;
+            width: 35px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid $check-grey;
+            padding: 0;
+            margin: 0;
+            z-index: 2;
+        }
+    }
+    &__icon{
+        position: relative;
+        top: -25px;
+        left: 7px;
+        width: 20px;
+        height: 15px;
+        border-radius: 2px;
+        background-color: $check-grey;
+        border: 1px solid $check-light-grey;
+    }
+    &__c1{
+        position: relative;
+        top: -37px;
+        left: 20px;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: $check-light-grey;
+        z-index: 1;
+    }
+    &__c2{
+        position: relative;
+        top: -40px;
+        left: 12px;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: $check-light-grey;
+        z-index: 1;
+    }
+}
+
+.upgrade__check{
+    @include flex(flex-start, center);
+    padding: 5px 0 5px;
+
+    input{
+        appearance: none;
+        margin: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        border: 1px solid $check-grey;
+        &:checked{
+            background-color: $check-grey;
+        }
+    }
+}
+
+.dimensions{
+    .col-lg-5{
+        tr{
+            border-bottom: 1px solid grey;
+        }
+        th{
+            width: 65%;
+        }
+        td{
+            width: 35%;
+        }
+    }
+    .col-lg-7{
+        img{
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+	.dimensions{
+        .col-lg-5{
+            table{
+                width: 100%;
+            }
+            tr{
+                border-bottom: 1px solid grey;
+                display: flex;
+                flex-direction: column;
+            }
+            th, td{
+                white-space: nowrap;
+            }
+            
+        }
+    }
+}
+
+.cart{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 0 0;
+}

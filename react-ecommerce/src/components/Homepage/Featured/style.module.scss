@@ -1,0 +1,37 @@
+@import '/src/shared/colors';
+@import '/src/shared/typo';
+@import '/src/shared/mixins';
+
+.featured{
+    background-color: $bg-bege;
+    height: 600px;
+    padding-top: 100px;
+    margin-top: 40px;
+    position: relative;
+    &__product{
+        @include flex(start, start);
+        position: relative;
+    }
+    &__product__img{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        aspect-ratio: 1;
+        width: 680px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .featured{
+        height: 400px;
+        padding-top: 0;
+        position: relative;
+        .col-lg-3{
+            width: calc(50% - 8px);
+        }
+        &__product__img{
+            max-width: 50%;
+        }
+    }
+}
