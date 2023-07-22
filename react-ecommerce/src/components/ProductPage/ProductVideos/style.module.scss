@@ -1,0 +1,9 @@
+@import '/src/shared/colors';
+@import '/src/shared/typo';
+@import '/src/shared/grid';
+@import '/src/shared/mixins';
+
+.zero{
+    @include flex(space-between, flex-start);
+    flex-wrap: wrap;
+}

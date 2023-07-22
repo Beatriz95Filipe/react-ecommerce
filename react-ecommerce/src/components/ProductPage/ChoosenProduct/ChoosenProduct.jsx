@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 import style from "./style.module.scss";
 import carousel from "./product-carousel.module.scss";
 
@@ -36,11 +34,11 @@ const ChoosenProduct = () => {
                 <form action="">
                     <div className={style.choosen__product__color}>
                         <p className={"choosen__color"}>Fabric Color:</p>
-                        <input type="radio" name="color" id={style.navy_blue} /><label className={style.color} for={style.navy_blue}>Navy Blue</label>
-                        <input type="radio" name="color" id={style.leaf} /><label className={style.color} for={style.leaf}>Leaf</label>
-                        <input type="radio" name="color" id={style.red_wine} /><label className={style.color} for={style.red_wine}>Red Wine</label>
-                        <input type="radio" name="color" id={style.night} /><label className={style.color} for={style.night}>Night</label>
-                        <input type="radio" name="color" id={style.light_grey} /><label className={style.color} for={style.light_grey}>Light Grey</label>
+                        <input type="radio" name="color" id={style.navy_blue} /><label className={style.color} htmlFor={style.navy_blue}>Navy Blue</label>
+                        <input type="radio" name="color" id={style.leaf} /><label className={style.color} htmlFor={style.leaf}>Leaf</label>
+                        <input type="radio" name="color" id={style.red_wine} /><label className={style.color} htmlFor={style.red_wine}>Red Wine</label>
+                        <input type="radio" name="color" id={style.night} /><label className={style.color} htmlFor={style.night}>Night</label>
+                        <input type="radio" name="color" id={style.light_grey} /><label className={style.color} htmlFor={style.light_grey}>Light Grey</label>
                     </div>
                     <div className={style.styles}>
                         <div className={style.arm__style}>
@@ -76,23 +74,23 @@ const ChoosenProduct = () => {
                         <p className={"choices"}>Upgrades</p>
                         <div className={style.upgrade__check}>
                             <input type="checkbox" name="upgrade" id="moveable" />
-                            <label for="moveable">Moveable chaise + €495</label>
+                            <label htmlFor="moveable">Moveable chaise + €495</label>
                         </div>
                         <div className={style.upgrade__check}>
                             <input type="checkbox" name="upgrade" id="ottoman" />
-                            <label for="ottoman">Ottoman + €345</label>
+                            <label htmlFor="ottoman">Ottoman + €345</label>
                         </div>
                         <div className={style.upgrade__check}>
                             <input type="checkbox" name="upgrade" id="lumbar" />
-                            <label for="lumbar">Lumbar Pillows + €135</label>
+                            <label htmlFor="lumbar">Lumbar Pillows + €135</label>
                         </div>
                         <div className={style.upgrade__check}>
                             <input type="checkbox" name="upgrade" id="sleep" />
-                            <label for="sleep">Sleep Kit + €295</label>
+                            <label htmlFor="sleep">Sleep Kit + €295</label>
                         </div>
                     </div>
                     <div className={style.cart}>
-                        <button class={"btn__cart"}>add to cart</button>
+                        <button className={"btn__cart"}>add to cart</button>
                     </div>
                 </form>
             </div>

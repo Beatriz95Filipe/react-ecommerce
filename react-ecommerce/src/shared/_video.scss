@@ -2,3 +2,23 @@
     width: 100%;
     margin-bottom: 20px;
 }
+
+.product-video{
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    aspect-ratio: 3/4;
+}
+
+@media screen and (max-width: 768px) {
+	.product-video{
+        aspect-ratio: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+	.videos{
+        max-height: 800px;
+        overflow: auto;
+    }
+}
