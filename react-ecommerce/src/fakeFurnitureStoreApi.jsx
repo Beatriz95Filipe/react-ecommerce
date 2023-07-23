@@ -37,8 +37,261 @@ const categoriesData = [
         subtitle2b: "Reversible doors",
         subtext2b: "Flip the doors from white laminate to natural wood whenever you please"
     },
+    { 
+        id: 3,
+        categoryName: "Outdoor",
+        categoryMainText: "Modular outdoor furniture fit for small patios, big pool decks, and every oasis in between.",
+        categoryideo1: "/src/assets/videos/product-video-outdoor-1.mp4",
+        categoryVideo1Slogan: "Made to tame all of Mother Nature's moods",
+        categoryVideo1Text: "Quality materials are a wise investment, especially for outdoor furniture. Relay is built with the best: rust-proof galvanized steel with an electrostatic powder coat, marine-grade hardware, all-weather mesh, quick-drying porous foam, and durable stain-repellant fabric. Every single element was thoughtfully considered to endure anything from weather to wild animals.",
+        subtitle1a: "Extra protection",
+        subtext1a: "Add a custom-fit cover to protect from UV rays, mold and mildew",
+        subtitle1b: "Marine-grade hardware",
+        subtext1b: "Stainless alloy hardware won't rust or degrade",
+        categoryideo2: "/src/assets/videos/product-video-outdoor-2.mp4",
+        categoryVideo2Slogan: "Easier to set up than a cocktail umbrella",
+        categoryVideo2Text: "And even more rewarding. Relay is designed to make assembly the easiest thing you will do all day, and it is just as breezy to take apart and store at the end of the season. You won't need any additional tools, and the three simple modules click together in an instant.",
+        subtitle2a: "Easy to store",
+        subtext2a: "Take apart at the end of the season and pack it on a shelf.",
+        subtitle2b: "Explore the complete collection",
+        subtext2b: "Designed to complement and coordinate"
+    },
+    { 
+        id: 4,
+        categoryName: "Bedroom",
+        categoryMainText: "Shop our complete selection of comfortable Sleepers, a sofa plus a memory foam sleep kit for all overnight guests, plus fast, free shipping on every order.",
+        categoryideo1: "/src/assets/videos/product-video-bedroom-1.mp4",
+        categoryVideo1Slogan: "The perfect kit",
+        categoryVideo1Text: "Everything you need to sleep comfortably on the sofa, stuffed in a convenient storage bag. There's a memory foam topper, a custom sheet set, a quilted blanket, a pillow and pillow case, and even an eye mask. The Nomad Sleep Kit is compatible with all of the Sofas, King Sofas, and Corner Sectionals in our Nomad Seating Collection.",
+        subtitle1a: "Everything you need",
+        subtext1a: "Sleep comfortably: eye mask, pillow, quilted blanket, flat sheet, fitted sheet and memory foam topper",
+        subtitle1b: "It's all in the bag",
+        subtext1b: "The custom-cut memory foam topper and fitted sheet fit over any three consecutive seat cushions.",
+        categoryideo2: "/src/assets/videos/product-video-bedroom-2.mp4",
+        categoryVideo2Slogan: "Made with premium, durable materials",
+        categoryVideo2Text: "Field is our first seating collection to use contract-grade polyester fabric. It is a premium textile option that feels soft and luxurious, while maintaining the durable, stain-resistant quality that modern life demands. The cushions are soft yet supportive, and they are CertiPUR-US certified to be free of ozone depleters, formaldehyde, heavy metals, flame retardants, and other nasty, dangerous things found in non-certified cushions.",
+        subtitle2a: "Bent plywood construction",
+        subtext2a: "Built with sustainably-sourced hardwoods and single sheets of bent plywood",
+        subtitle2b: "Reinforced steel hardware",
+        subtext2b: "As rigid and stable as a traditional fixed-width construction"
+    },
+    { 
+        id: 5,
+        categoryName: "Storage",
+        categoryMainText: "Our coffee tables, side tables, and benches — across a variety of stylistic collections — are designed to complement our award-winning seating. Whether you are looking for a functional coffee table with storage or a timeless mid-century Modern design, our edited selection represents the best of furniture design.",
+        categoryideo1: "/src/assets/videos/product-video-storage-1.mp4",
+        categoryVideo1Slogan: "Storage is just scratching the surface",
+        categoryVideo1Text: "Beneath the tabletop is a convenient storage compartment to hide your clutter — or maybe just your charger — but don't miss the magic of the tabletop itself. The two removable trays are perfect for a makeshift lap desk or serving tray to dress up that takeout you are having for dinner.",
+        subtitle1a: "Storage compartment",
+        subtext1a: "Keep remotes, chargers, and other knick-knacks out of sight",
+        subtitle1b: "Storage with cord management",
+        subtext1b: "Keep your devices charged while neatly tucked out of sight",
+        categoryideo2: "/src/assets/videos/product-video-storage-2.mp4",
+        categoryVideo2Slogan: "Simple, tool-free assembly",
+        categoryVideo2Text: "Like everything we make, this table is incredibly simple to set up. It comes with all of the hardware you need and you don't need any tools. Better yet, it is just as easy to take apart and pack up when you move.",
+        subtitle2a: "Easy to move",
+        subtext2a: "Take it apart for easy transport",
+        subtitle2b: "Hardware included",
+        subtext2b: "Parts and hardware are packed in the same box"
+    }
+];
 
-    { id: 3, categoryName: "Outdoor" },
-    { id: 4, categoryName: "Bedroom" },
-    { id: 5, categoryName: "Storage" }
-  ];
+const productsData = [
+    {
+        id: 1,
+        name: "Nomad Sofa",
+        category: "Seating",
+        imageSrc: "/src/assets/products/seating/1/product.webp",
+        imageHover: "/src/assets/products/seating/1/product-hover.webp",
+        price: "2295€"
+    },
+    {
+        id: 2,
+        name: "Field Sofa",
+        category: "Seating",
+        imageSrc: "/src/assets/products/seating/2/product.webp",
+        imageHover: "/src/assets/products/seating/2/product-hover.webp",
+        price: "1995€"
+    },
+    {
+        id: 3,
+        name: "Range Sofa",
+        category: "Seating",
+        imageSrc: "/src/assets/products/seating/3/product.webp",
+        imageHover: "/src/assets/products/seating/3/product-hover.webp",
+        price: "1950€"
+    },
+    {
+        id: 4,
+        name: "Range One Arm Sofa",
+        category: "Seating",
+        imageSrc: "/src/assets/products/seating/4/product.webp",
+        imageHover: "/src/assets/products/seating/4/product-hover.webp",
+        price: "1895€"
+    },
+    {
+        id: 5,
+        name: "Union Sofa",
+        category: "Seating",
+        imageSrc: "/src/assets/products/seating/5/product.webp",
+        imageHover: "/src/assets/products/seating/5/product-hover.webp",
+        price: "3595€"
+    },
+    {
+        id: 6,
+        name: "Range Sectional Lounger",
+        category: "Seating",
+        imageSrc: "/src/assets/products/seating/6/product.webp",
+        imageHover: "/src/assets/products/seating/6/product-hover.webp",
+        price: "2495€"
+    },
+    {
+        id: 7,
+        name: "Nomad Sofa Sectional",
+        category: "Seating",
+        imageSrc: "/src/assets/products/seating/7/product.webp",
+        imageHover: "/src/assets/products/seating/7/product-hover.webp",
+        price: "2940€"
+    },
+    {
+        id: 8,
+        name: "Nomad Velvet Sofa with Ottoman",
+        category: "Seating",
+        imageSrc: "/src/assets/products/seating/8/product.webp",
+        imageHover: "/src/assets/products/seating/8/product-hover.webp",
+        price: "3420€"
+    },
+    {
+        id: 9,
+        name: "Range Open Sectional Lounger",
+        category: "Seating",
+        imageSrc: "/src/assets/products/seating/9/product.webp",
+        imageHover: "/src/assets/products/seating/9/product-hover.webp",
+        price: "1695€"
+    },
+    {
+        id: 10,
+        name: "Carta Credenza",
+        category: "Living Room",
+        imageSrc: "/src/assets/products/living room/1/product.webp",
+        imageHover: "/src/assets/products/living room/1/product-hover.webp",
+        price: "1195€"
+    },
+    {
+        id: 11,
+        name: "Index Wall Shelf",
+        category: "Living Room",
+        imageSrc: "/src/assets/products/living room/2/product.webp",
+        imageHover: "/src/assets/products/living room/2/product-hover.webp",
+        price: "525€"
+    },
+    {
+        id: 12,
+        name: "Index Wall Shelf, Set of 2",
+        category: "Living Room",
+        imageSrc: "/src/assets/products/living room/3/product.webp",
+        imageHover: "/src/assets/products/living room/3/product-hover.webp",
+        price: "995€"
+    },
+    {
+        id: 13,
+        name: "Serif Coffee Table",
+        category: "Living Room",
+        imageSrc: "/src/assets/products/living room/4/product.webp",
+        imageHover: "/src/assets/products/living room/4/product-hover.webp",
+        price: "695€"
+    },
+    {
+        id: 14,
+        name: "Carta Bench",
+        category: "Living Room",
+        imageSrc: "/src/assets/products/living room/5/product.webp",
+        imageHover: "/src/assets/products/living room/5/product-hover.webp",
+        price: "595€"
+    },
+    {
+        id: 15,
+        name: "Lodge Chair",
+        category: "Living Room",
+        imageSrc: "/src/assets/products/living room/6/product.webp",
+        imageHover: "/src/assets/products/living room/6/product-hover.webp",
+        price: "1170€"
+    },
+    {
+        id: 16,
+        name: "Relay Outdoor Sofa",
+        category: "Outdoor",
+        imageSrc: "/src/assets/products/outdoor/1/product.webp",
+        imageHover: "/src/assets/products/outdoor/1/product-hover.webp",
+        price: "4320€"
+    },
+    {
+        id: 17,
+        name: "Relay Outdoor Chair",
+        category: "Outdoor",
+        imageSrc: "/src/assets/products/outdoor/2/product.webp",
+        imageHover: "/src/assets/products/outdoor/2/product-hover.webp",
+        price: "945€"
+    },
+    {
+        id: 18,
+        name: "Relay Outdoor Double Sofa",
+        category: "Outdoor",
+        imageSrc: "/src/assets/products/outdoor/3/product.webp",
+        imageHover: "/src/assets/products/outdoor/3/product-hover.webp",
+        price: "2440€"
+    },
+    {
+        id: 19,
+        name: "Nomad Sleep Kit",
+        category: "Bedroom",
+        imageSrc: "/src/assets/products/bedroom/1/product.webp",
+        imageHover: "/src/assets/products/bedroom/1/product-hover.webp",
+        price: "495€"
+    },
+    {
+        id: 20,
+        name: "Vesper Wood & Fabric Lounge Chair",
+        category: "Bedroom",
+        imageSrc: "/src/assets/products/bedroom/2/product.webp",
+        imageHover: "/src/assets/products/bedroom/2/product-hover.webp",
+        price: "1825€"
+    },
+    {
+        id: 21,
+        name: "Range Sleep Kit",
+        category: "Bedroom",
+        imageSrc: "/src/assets/products/bedroom/3/product.webp",
+        imageHover: "/src/assets/products/bedroom/3/product-hover.webp",
+        price: "495€"
+    },
+    {
+        id: 22,
+        name: "Carta Coffee Table",
+        category: "Storage",
+        imageSrc: "/src/assets/products/storage/1/product.webp",
+        imageHover: "/src/assets/products/storage/1/product-hover.webp",
+        price: "645€"
+    },
+    {
+        id: 23,
+        name: "Carta Side Table",
+        category: "Storage",
+        imageSrc: "/src/assets/products/storage/2/product.webp",
+        imageHover: "/src/assets/products/storage/2/product-hover.webp",
+        price: "445€"
+    },
+    {
+        id: 24,
+        name: "Carta Credenza",
+        category: "Storage",
+        imageSrc: "/src/assets/products/storage/3/product.webp",
+        imageHover: "/src/assets/products/storage/3/product-hover.webp",
+        price: "1195€"
+    },
+];
+
+export default {
+    categoriesData,
+    productsData,
+}; 

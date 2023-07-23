@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 import CategoryCard from "../../Homepage/Categories/CategoryCard";
 
 import "/src/shared/_grid.scss";
@@ -40,7 +42,7 @@ const Categories = () => {
                     linkTo={"/category"}
                     imgSrc="/src/assets/homepage/03-categories/category-tables.webp"
                     imgAlt="Tables"
-                    categoryName="Tables"
+                    categoryName="Living Room"
                 />
                 <CategoryCard
                     linkTo={"/category"}
