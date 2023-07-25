@@ -7,9 +7,9 @@ import "/src/shared/_mixins.scss";
 import "/src/shared/_buttons.scss";
 import "/src/shared/_thumbnails.scss";
 
-const CategoryCard = ({linkTo, imgSrc, imgAlt, categoryName}) => {
+const CategoryCard = ({keyId, linkTo, imgSrc, imgAlt, categoryName}) => {
     return(
-        <div className={"col-lg-4"}>
+        <div className={"col-lg-4"} key={keyId}>
             <Link to={linkTo}>
                 <img src={imgSrc} alt={imgAlt} />
             </Link>

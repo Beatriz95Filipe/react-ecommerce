@@ -4,9 +4,9 @@ import "/src/shared/_grid.scss";
 import "/src/shared/_typo.scss";
 import "/src/shared/_thumbnails.scss";
 
-const CategoryItem = ({ linkTo, imgSrc, imgAlt, hoverSrc, hoverAlt, itemName, itemPrice }) => {
+const CategoryItem = ({ keyId, linkTo, imgSrc, imgAlt, hoverSrc, hoverAlt, itemName, itemPrice }) => {
   return (
-    <div className={`${"col-lg-4"} ${"product__thumbnail"}`}>
+    <div className={`${"col-lg-4"} ${"product__thumbnail"}`} key={keyId}>
         <Link to={linkTo}>
             <img className={"main__img"} src={imgSrc} alt={imgAlt} />
             <img className={"hover__img"} src={hoverSrc} alt={hoverAlt} />

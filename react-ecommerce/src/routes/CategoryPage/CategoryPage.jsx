@@ -4,13 +4,43 @@ import "/src/shared/_thumbnails.scss";
 
 import CategoryItem from "../../components/CategoryItem/CategoryItem";
 
+import useFetchCategories from "../../hooks/useFetchCategories";
+import useFetchProducts from "../../hooks/useFetchProducts";
+import { useParams } from "react-router-dom";
+
 const CategoryPage = () => {
+  
+  const { categoryName } = useParams();
+  //console.log(categoryName);
+
+  const { categories } = useFetchCategories();
+  const clickedCategory = categories.find(
+    (category) => category.categoryName === categoryName
+  );
+
+  const { products } = useFetchProducts(categoryName);
+  //console.log(products);
+  
+  const productsByCategory = products.map((product) => (
+    <CategoryItem
+      keyId={product.id}
+      linkTo={`/product/${product.name}`}
+      imgSrc={product.imageSrc}
+      imgAlt={product.name}
+      hoverSrc={product.imageHover}
+      hoverAlt={product.name}
+      itemName={product.name}
+      itemPrice={product.price}
+    />
+  ));
+
   return (
     <section className={"container"}>
-      <p className={"category__title"}>All Seating</p>
-      <p className={"category__info"}>The main feature of any living room is always going to be the seating. Pick and choose your seating styles to build the perfect place to relax. Unwind by yourself, spend time with your family, or entertain guests, all in ultimate comfort.</p>
+      <p className={"category__title"}>All {categoryName}</p>
+      <p className={"category__info"}>{clickedCategory?.categoryMainText}</p>
       <div className={`${"row"} ${"category__product__thumbnail"}`}>
-        <CategoryItem
+        {productsByCategory}
+        {/* <CategoryItem
           linkTo={"/product"}
           imgSrc="/src/assets/products/seating/1/product.webp"
           imgAlt="seating1"
@@ -36,7 +66,7 @@ const CategoryPage = () => {
           hoverAlt="seating3h"
           itemName="Nomad Sofa"
           itemPrice="€1595 or as low as €100/mo"
-        />
+        /> */}
       </div>
   </section>
   );

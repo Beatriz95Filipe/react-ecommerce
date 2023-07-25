@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import useFetchCategories from "../../../hooks/useFetchCategories";
 
 import CategoryCard from "../../Homepage/Categories/CategoryCard";
 
@@ -10,11 +11,25 @@ import "/src/shared/_buttons.scss";
 import "/src/shared/_thumbnails.scss";
 
 const Categories = () => {
+
+    const { categories } = useFetchCategories();
+  
+    const categoryThumbnail = categories.map((category) => (
+        <CategoryCard
+            keyId={category.id}
+            linkTo={`/category/${category.categoryName}`}
+            imgSrc={category.categoryThumbnail}
+            imgAlt={category.categoryName}
+            categoryName={category.categoryName}
+        />
+    ));
+
     return(
         <section className={"container"}>
             <p className={"slogan"}>Clever designs, delivered free</p>
             <div className={`${"row"} ${"categories__thumbnail"}`}>
-                <CategoryCard
+                {categoryThumbnail}
+                {/* <CategoryCard
                     linkTo={"/category"}
                     imgSrc="/src/assets/homepage/03-categories/category-seating.webp"
                     imgAlt="Seating"
@@ -49,7 +64,7 @@ const Categories = () => {
                     imgSrc="/src/assets/homepage/03-categories/category-rugs.webp"
                     imgAlt="Rugs"
                     categoryName="Rugs"
-                />
+                /> */}
             </div>
         </section>
     );

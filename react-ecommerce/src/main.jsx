@@ -3,6 +3,7 @@ import App from './App.jsx'
 import { createRoot } from "react-dom/client";
 
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import useFetchCategories from './hooks/useFetchCategories.js';
 
 import Homepage from "./routes/Homepage/Homepage";
 import CategoryPage from "./routes/CategoryPage/CategoryPage";
@@ -20,17 +21,11 @@ const router = createBrowserRouter([
         element: <Homepage />
       },
       {
-        path: "/category",
+        path: "/category/:categoryName",
         element: <CategoryPage />,
-        // children: [
-        //   {
-        //     path: "/category/:choosenCategory",
-        //     element: <UserDetails />
-        //   }
-        // ]
       },
       {
-        path: "/product",
+        path: "/product/:name",
         element: <ProductPage />
       }
     ]
