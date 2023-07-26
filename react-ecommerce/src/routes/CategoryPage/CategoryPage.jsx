@@ -3,6 +3,7 @@ import "/src/shared/_typo.scss";
 import "/src/shared/_thumbnails.scss";
 
 import CategoryItem from "../../components/CategoryItem/CategoryItem";
+import SearchBar from "../../components/searchBar/SearchBar";
 
 import useFetchCategories from "../../hooks/useFetchCategories";
 import useFetchProducts from "../../hooks/useFetchProducts";
@@ -38,6 +39,7 @@ const CategoryPage = () => {
     <section className={"container"}>
       <p className={"category__title"}>All {categoryName}</p>
       <p className={"category__info"}>{clickedCategory?.categoryMainText}</p>
+      {/* SEARCHBAR */}
       <div className={`${"row"} ${"category__product__thumbnail"}`}>
         {productsByCategory}
         {/* <CategoryItem

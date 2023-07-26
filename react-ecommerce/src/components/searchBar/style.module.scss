@@ -1,0 +1,26 @@
+@import '/src/shared/colors';
+@import '/src/shared/typo';
+@import '/src/shared/mixins';
+@import '/src/shared/buttons';
+
+.searchProducts{
+    background-color: $bg-lime;
+    padding: 10px 20px 10px;
+    margin-bottom: 40px;
+    @include flex(center, center);
+    input{
+        background-color: $bg-lime;
+        border: none;
+        outline: none;
+        width: 90%;
+        padding: 12px 8px 12px;
+    }
+}
+
+.searchResultItem{
+    @include flex(flex-end, center);
+    img{
+        width: 5%;
+        padding: 5px;
+    }
+}
