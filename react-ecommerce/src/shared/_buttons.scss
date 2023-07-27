@@ -34,10 +34,73 @@
     }
 }
 
+.btn__search{
+    background-color: $bg-lime;
+    border: none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding: 16px 24px 16px;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .btn__subscribe{
         border: 1.5px solid $bg-bege;
         border-radius: 4px;
         width: 100%;
     }
+    .btn__search{
+        border: 1.5px solid $bg-lime;
+        border-radius: 4px;
+        width: 100%;
+    }
+}
+
+//product quantity add to cart
+.product_quantity {
+    @include flex(flex-start, center);
+    width: 120px; 
+    height: 41px;
+    margin: 0;
+    &_btn {
+        border: 1px solid $bg-lime;
+        margin: 0px;
+        width: 40px;
+        height: 100%;   
+        background: $bg-lime; 
+        outline: none;
+        &:hover{
+            cursor: pointer;
+            background: #f6ed97;
+        }
+        &:active{
+            background: #f6ed97;
+        }
+    }
+    &_num{
+        display: inline-block;
+        text-align: center;
+        border: 1px solid $bg-lime;
+        margin: 0px;
+        width: 40px;
+        height: 100%;
+        line-height: 40px;
+        box-sizing: border-box; 
+        background: white;
+        &::selection{
+            background: none;
+        }
+    }
+}
+
+.btn_decrease {
+    margin-right: -4px;
+    border-radius: 4px 0 0 4px;
+}
+
+.btn_increase {
+    margin-left: -4px;
+    border-radius: 0 4px 4px 0;
 }

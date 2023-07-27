@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import useFetchCategories from "../../../hooks/useFetchCategories";
 
 import CategoryCard from "../../Homepage/Categories/CategoryCard";

@@ -278,3 +278,8 @@
     justify-content: flex-end;
     padding: 20px 0 0;
 }
+
+.product_form{
+    @include flex(space-between, flex-end);
+    padding: 20px 0 0;
+}

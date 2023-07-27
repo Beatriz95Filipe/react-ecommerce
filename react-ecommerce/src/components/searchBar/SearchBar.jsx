@@ -25,7 +25,7 @@ const SearchBar = () => {
 
   const [matchingProducts, setMatchingProducts] = useState([]);
 
-  const handleSearchInput = (searchInput) => {
+  const handleSearchInput = (searchInput) => { //devia escrever sempre (event)???
     const searchedProduct = searchInput.target.value.toLowerCase();
     if(searchedProduct === "") {
       setMatchingProducts([]);

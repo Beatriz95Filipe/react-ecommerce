@@ -1,7 +1,3 @@
-import { Link } from "react-router-dom";
-
-import style from "./style.module.scss";
-
 import ChoosenProduct from "../../components/ProductPage/ChoosenProduct/ChoosenProduct.jsx";
 import ProductSpecs from "../../components/ProductPage/ProductSpecs.jsx";
 import ProductAbout from "../../components/ProductPage/ProductAbout/ProductAbout.jsx";
