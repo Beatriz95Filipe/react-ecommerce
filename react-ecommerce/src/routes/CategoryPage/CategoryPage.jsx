@@ -25,7 +25,7 @@ const CategoryPage = () => {
   const productsByCategory = products.map((product) => (
     <CategoryItem
       keyId={product.id}
-      linkTo={`/product/${product.name}`}
+      linkTo={`/product/${product.id}`}
       imgSrc={product.imageSrc}
       imgAlt={product.name}
       hoverSrc={product.imageHover}
@@ -40,6 +40,7 @@ const CategoryPage = () => {
       <p className={"category__title"}>All {categoryName}</p>
       <p className={"category__info"}>{clickedCategory?.categoryMainText}</p>
       {/* SEARCHBAR */}
+      <SearchBar />
       <div className={`${"row"} ${"category__product__thumbnail"}`}>
         {productsByCategory}
         {/* <CategoryItem

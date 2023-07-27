@@ -9,7 +9,7 @@ const Contact = () => {
         <form className={style.contact} action="">
         <div className={style.subscribe}>
             <input type="email" placeholder="Sign up for enthralling couch reads" />
-            <button className={"btn__subscribe"} type="submit">shop seating</button>
+            <button className={"btn__subscribe"} type="submit">subscribe</button>
         </div>
         <div className={style.socials}>
             <a className={"socials_thumbnail"} href="">
