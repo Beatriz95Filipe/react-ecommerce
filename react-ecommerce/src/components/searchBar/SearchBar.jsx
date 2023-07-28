@@ -6,7 +6,7 @@ import "/src/shared/_typo.scss";
 import "/src/shared/_thumbnails.scss";
 
 import useFetchCategories from "../../hooks/useFetchCategories";
-import useFetchProducts from "../../hooks/useFetchProducts";
+import useFetchProducts from "../../hooks/useFetchProductsByCategory";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 

@@ -8,28 +8,20 @@ import "/src/shared/_thumbnails.scss";
 import "/src/shared/_buttons.scss";
 
 import useFetchProducts from "../../../hooks/useFetchProducts";
-import useFetchCategories from "../../../hooks/useFetchCategories";
+// import useFetchCategories from "../../../hooks/useFetchCategories";
+// import useFetchCategoryByProduct from "../../../hooks/useFetchCategoryByProduct";
 import { useParams } from "react-router-dom";
 
 const ChoosenProduct = () => {
 
     const { id } = useParams();
-    console.log(id);
+    console.log(id); 
 
-    const { categories } = useFetchCategories();
-    const { products } = useFetchProducts(); //falta o argumento "categoryName"
-    console.log(products);
-
-    const clickedProduct = products.find(
-        (product) => product.id === id
+    const { products } = useFetchProducts();
+    const choosenProduct = products.find(
+        (product) => product.id === parseInt(id)
     );
-    console.log(clickedProduct);
-
-    // const productCategory = products.find(
-    //     (product) => product.categoryName === productId
-    // );
-    // const { productCategory } = useFetchCategories(clickedProduct.categoryName);
-    // console.log(productCategory);
+    console.log(choosenProduct);
 
     return (
         <section className={"container"}>

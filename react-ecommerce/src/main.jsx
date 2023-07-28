@@ -23,6 +23,12 @@ const router = createBrowserRouter([
       {
         path: "/category/:categoryName",
         element: <CategoryPage />,
+        // children: [
+        //   {
+        //     path: "/product/:id",
+        //     element: <ProductPage />
+        //   }
+        // ] não consigo criar rota children, dá erro de "absolute child route path"
       },
       {
         path: "/product/:id",

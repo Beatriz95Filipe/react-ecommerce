@@ -6,7 +6,7 @@ import CategoryItem from "../../components/CategoryItem/CategoryItem";
 import SearchBar from "../../components/searchBar/SearchBar";
 
 import useFetchCategories from "../../hooks/useFetchCategories";
-import useFetchProducts from "../../hooks/useFetchProducts";
+import useFetchProductsByCategory from "../../hooks/useFetchProductsByCategory";
 import { useParams } from "react-router-dom";
 
 const CategoryPage = () => {
@@ -19,7 +19,7 @@ const CategoryPage = () => {
     (category) => category.categoryName === categoryName
   );
 
-  const { products } = useFetchProducts(categoryName);
+  const { products } = useFetchProductsByCategory(categoryName);
   //console.log(products);
   
   const productsByCategory = products.map((product) => (
