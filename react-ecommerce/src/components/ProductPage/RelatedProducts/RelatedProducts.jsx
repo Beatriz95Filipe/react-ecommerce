@@ -6,6 +6,9 @@ import "/src/shared/_thumbnails.scss";
 import CategoryItem from "../../CategoryItem/CategoryItem";
 
 const RelatedProducts = () => {
+
+    //através da categoria do produto, mostrar 3 produtos da mesma categoria - TORNAR DINÂMICO
+
   return (
     <section className="container">
         <p className="slogan">Here's what else our designers recommend</p>

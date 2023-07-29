@@ -5,39 +5,64 @@ import "/src/shared/_thumbnails.scss";
 
 import ProductVideoText from "./ProductVideoText";
 
+import { useParams } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { ContextApi } from "../../../ContextApi/ContextApi";
+
 const ProductVideos = () => {
-  return (
-    <section className={"container"}>
-        <div className={`${"row"} ${"videos"}`}>
+
+    const { id } = useParams();
+    console.log(id); 
+
+    const { products, categories } = useContext(ContextApi);
+
+    const choosenProduct = products.find(
+        (product) => product.id === parseInt(id)
+    );
+    //console.log(choosenProduct);
+
+    const productCategory = choosenProduct?.categoryName;
+    console.log(productCategory);
+
+    const matchingCategory = categories.find(
+        (category) => category.categoryName === productCategory
+    );
+    console.log(matchingCategory);
+
+    return (
+        <section className={"container"}>
+            <div className={`${"row"} ${"videos"}`}>
             <div className={"col-lg-6"}>
-                <video className={"product-video"} muted autoPlay loop>
-                    <source src="/src/assets/videos/product-video-seating-1.mp4" />
-                </video>
+                    <video className={"product-video"} muted autoPlay loop>
+                        <source src="/src/assets/videos/product-video-seating-1.mp4"/>
+                        {/* quando uso {matchingCategory?.categoryVideo1} o vídeo deixa de aparecer, deve ter que ver com o tempo que o fetch da context api demora - RESOLVER*/}
+                    </video>
+                </div>
+                <ProductVideoText
+                    sloganVideoTitle={matchingCategory?.categoryVideo1Slogan}
+                    sloganVideoText={matchingCategory?.categoryVideo1Text}
+                    title1={matchingCategory?.subtitle1a}
+                    text1={matchingCategory?.subtext1a}
+                    title2={matchingCategory?.subtitle1b}
+                    text2={matchingCategory?.subtext1b}
+                />
+                <ProductVideoText
+                    sloganVideoTitle={matchingCategory?.categoryVideo2Slogan}
+                    sloganVideoText={matchingCategory?.categoryVideo2Text}
+                    title1={matchingCategory?.subtitle2a}
+                    text1={matchingCategory?.subtext2a}
+                    title2={matchingCategory?.subtitle2b}
+                    text2={matchingCategory?.subtext2b}
+                />
+                <div className={"col-lg-6"}>
+                    <video className={"product-video"} muted autoPlay loop>
+                        <source src="/src/assets/videos/product-video-seating-2.mp4" />
+                        {/* quando uso {matchingCategory?.categoryVideo2} o vídeo deixa de aparecer, deve ter que ver com o tempo que o fetch da context api demora - RESOLVER*/}
+                    </video>
+                </div>
             </div>
-            <ProductVideoText
-                sloganVideoTitle="Durable enough for everyday drama"
-                sloganVideoText="Each and every component of our furniture is selected for durability, from the galvanized steel latches to the precision-milled Baltic Birch frame. The fabric is inherently scratch-resistant, thanks to an incredibly tight weave, which makes it perfect for pets and their parents."
-                title1="Low carbon footprint"
-                text1="Fabric made from upcycled materials"
-                title2="Sustainable wood"
-                text2="Sourced from responsibly managed forests"
-            />
-            <ProductVideoText
-                sloganVideoTitle="Don't sweat the spills"
-                sloganVideoText="Our olefin fabric is stain-resistant thanks to a deep dyeing process that colors each individual strand to the core, as opposed to other fibers that have little pores that absorb stains. You can even spray spills with a water and bleach solution (yes, we said bleach) and blot it out to clean stains."
-                title1="Non toxic"
-                text1="Zero chemical additives or treatments"
-                title2="Zero PFCs"
-                text2="Fabric free of dangerous formaldehydes"
-            />
-            <div className={"col-lg-6"}>
-                <video className={"product-video"} muted autoPlay loop>
-                    <source src="/src/assets/videos/product-video-seating-2.mp4" />
-                </video>
-            </div>
-        </div>
-    </section>
-  );
+        </section>
+    );
 };
 
 export default ProductVideos;

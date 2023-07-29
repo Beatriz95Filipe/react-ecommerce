@@ -5,8 +5,8 @@ import "/src/shared/_grid.scss";
 import "/src/shared/_typo.scss";
 import "/src/shared/_thumbnails.scss";
 
-import useFetchCategories from "../../hooks/useFetchCategories";
-import useFetchProducts from "../../hooks/useFetchProductsByCategory";
+import useFetchCategories from "../../customHooks-notUsed/useFetchCategories";
+import useFetchProducts from "../../customHooks-notUsed/useFetchProductsByCategory";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 

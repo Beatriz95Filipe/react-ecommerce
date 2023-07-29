@@ -1,9 +1,8 @@
 import App from './App.jsx'
-
 import { createRoot } from "react-dom/client";
-
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import useFetchCategories from './hooks/useFetchCategories.js';
+import { AppProvider } from './ContextApi/ContextApi.jsx';
+
 
 import Homepage from "./routes/Homepage/Homepage";
 import CategoryPage from "./routes/CategoryPage/CategoryPage";
@@ -14,7 +13,11 @@ import Root from "./routes/Root.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: (
+      <AppProvider>
+        <Root />
+      </AppProvider>
+    ),
     children: [
       {
         path: "/",
@@ -28,7 +31,9 @@ const router = createBrowserRouter([
         //     path: "/product/:id",
         //     element: <ProductPage />
         //   }
-        // ] não consigo criar rota children, dá erro de "absolute child route path"
+        // ]
+        // !!! não consigo criar rota children, dá erro de "absolute child route path"
+        // /category/:categoryName/product/:id - conseguiria aceder ao produto (pelo id no url) e à categoria (pelo url)
       },
       {
         path: "/product/:id",

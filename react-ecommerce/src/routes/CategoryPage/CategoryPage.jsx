@@ -5,24 +5,26 @@ import "/src/shared/_thumbnails.scss";
 import CategoryItem from "../../components/CategoryItem/CategoryItem";
 import SearchBar from "../../components/searchBar/SearchBar";
 
-import useFetchCategories from "../../hooks/useFetchCategories";
-import useFetchProductsByCategory from "../../hooks/useFetchProductsByCategory";
 import { useParams } from "react-router-dom";
+import React, { useContext } from "react";
+import { ContextApi } from "../../ContextApi/ContextApi";
 
 const CategoryPage = () => {
   
   const { categoryName } = useParams();
   //console.log(categoryName);
 
-  const { categories } = useFetchCategories();
+  const { categories, products } = useContext(ContextApi);
+
   const clickedCategory = categories.find(
     (category) => category.categoryName === categoryName
   );
 
-  const { products } = useFetchProductsByCategory(categoryName);
-  //console.log(products);
+  const productsByCategory = products.filter(
+    (product) => product.categoryName === categoryName
+  );
   
-  const productsByCategory = products.map((product) => (
+  const showProducts = productsByCategory.map((product) => (
     <CategoryItem
       keyId={product.id}
       linkTo={`/product/${product.id}`}
@@ -39,34 +41,19 @@ const CategoryPage = () => {
     <section className={"container"}>
       <p className={"category__title"}>All {categoryName}</p>
       <p className={"category__info"}>{clickedCategory?.categoryMainText}</p>
-      {/* SEARCHBAR */}
       <SearchBar />
       <div className={`${"row"} ${"category__product__thumbnail"}`}>
-        {productsByCategory}
+        {
+          productsByCategory.length === 0 ? (
+          <p className="no_product">We don't have any {categoryName} at the moment...</p>
+          ) : (showProducts)
+        }
         {/* <CategoryItem
           linkTo={"/product"}
           imgSrc="/src/assets/products/seating/1/product.webp"
           imgAlt="seating1"
           hoverSrc="/src/assets/products/seating/1/product-hover.webp"
           hoverAlt="seating1h"
-          itemName="Nomad Sofa"
-          itemPrice="€1595 or as low as €100/mo"
-        />
-        <CategoryItem
-          linkTo={"/product"}
-          imgSrc="/src/assets/products/seating/2/product.webp"
-          imgAlt="seating2"
-          hoverSrc="/src/assets/products/seating/2/product-hover.webp"
-          hoverAlt="seating2h"
-          itemName="Nomad Sofa"
-          itemPrice="€1595 or as low as €100/mo"
-        />
-        <CategoryItem
-          linkTo={"/product"}
-          imgSrc="/src/assets/products/seating/3/product.webp"
-          imgAlt="seating3"
-          hoverSrc="/src/assets/products/seating/3/product-hover.webp"
-          hoverAlt="seating3h"
           itemName="Nomad Sofa"
           itemPrice="€1595 or as low as €100/mo"
         /> */}

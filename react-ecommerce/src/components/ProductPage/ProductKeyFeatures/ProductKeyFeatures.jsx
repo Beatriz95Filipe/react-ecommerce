@@ -3,6 +3,8 @@ import KeyFeatureItem from "../ProductKeyFeatures/KeyFeatureItem";
 import "/src/shared/_grid.scss";
 import "/src/shared/_typo.scss";
 
+//tornar componente dinâmico - key features associadas a cada categoria (fakeAPI) - usar contextAPI
+
 const ProductKeyFeatures = () => {
   return (
     <section className={"container"}>

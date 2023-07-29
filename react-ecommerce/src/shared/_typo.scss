@@ -147,6 +147,11 @@ p {
 			line-height: 1.5;
 		}
 	}
+
+	&.no_product{
+		padding: 40px;
+		text-align: center;
+	}
 }
 
 @media screen and (max-width: 768px) {

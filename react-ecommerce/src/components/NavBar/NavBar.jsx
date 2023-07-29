@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import useFetchCategories from "../../hooks/useFetchCategories";
+import React, { useContext } from "react";
+import { ContextApi } from "../../ContextApi/ContextApi";
 
 import style from "./style.module.scss";
 import "/src/shared/_grid.scss";
@@ -10,7 +11,7 @@ import "/src/shared/_mixins.scss";
 
 const NavBar = () => {
 
-  const { categories } = useFetchCategories();
+  const { categories } = useContext(ContextApi);
   
   const navBarMenu = categories.map((category) => (
     <Link to={`/category/${category.categoryName}`} className={style.menu__item} key={category.id}>

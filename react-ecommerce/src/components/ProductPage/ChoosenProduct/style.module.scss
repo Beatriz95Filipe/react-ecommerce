@@ -37,10 +37,6 @@
         &:checked{
             border: 3px solid $bg-lime;
         }
-
-        &:checked + label.color {
-            display: inline-block;
-        }
     }
 }
 
@@ -281,5 +277,4 @@
 
 .product_form{
     @include flex(space-between, flex-end);
-    padding: 20px 0 0;
 }

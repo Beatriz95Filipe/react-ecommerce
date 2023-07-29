@@ -1,4 +1,5 @@
-import useFetchCategories from "../../../hooks/useFetchCategories";
+import React, { useContext } from "react";
+import { ContextApi } from "../../../ContextApi/ContextApi";
 
 import CategoryCard from "../../Homepage/Categories/CategoryCard";
 
@@ -11,7 +12,7 @@ import "/src/shared/_thumbnails.scss";
 
 const Categories = () => {
 
-    const { categories } = useFetchCategories();
+    const { categories } = useContext(ContextApi);
   
     const categoryThumbnail = categories.map((category) => (
         <CategoryCard

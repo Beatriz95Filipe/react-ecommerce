@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { AppProvider } from "./ContextApi/ContextApi";
+
 import Homepage from "./routes/Homepage/Homepage";
 import CategoryPage from "./routes/CategoryPage/CategoryPage";
 import ProductPage from "./routes/ProductPage/ProductPage";
@@ -16,10 +18,12 @@ export default function App() {
   //para criarmos rotas, usamos uma biblioteca externa "react-router-dom"
 
   return (
-    <div className="App">
-      <Homepage />
-      <CategoryPage />
-      <ProductPage />
-    </div>
+    <AppProvider>
+      <div className="App">
+        <Homepage />
+        <CategoryPage />
+        <ProductPage />
+      </div>
+    </AppProvider>
   );
 }
