@@ -18,7 +18,8 @@
             "subtitle2a": "Non toxic",
             "subtext2a": "Zero chemical additives or treatments",
             "subtitle2b": "Zero PFCs",
-            "subtext2b": "Fabric free of dangerous formaldehydes"
+            "subtext2b": "Fabric free of dangerous formaldehydes",
+            "productDimensions":"/src/assets/products/seating/product-dimensions.png"
         },
         { 
             "id": 2,
@@ -38,7 +39,8 @@
             "subtitle2a": "Two leg options",
             "subtext2a": "Minimalist straight legs or mid-century hairpin legs",
             "subtitle2b": "Reversible doors",
-            "subtext2b": "Flip the doors from white laminate to natural wood whenever you please"
+            "subtext2b": "Flip the doors from white laminate to natural wood whenever you please",
+            "productDimensions":"/src/assets/products/living room/product-dimensions.webp"
         },
         { 
             "id": 3,
@@ -58,7 +60,8 @@
             "subtitle2a": "Easy to store",
             "subtext2a": "Take apart at the end of the season and pack it on a shelf.",
             "subtitle2b": "Explore the complete collection",
-            "subtext2b": "Designed to complement and coordinate"
+            "subtext2b": "Designed to complement and coordinate",
+            "productDimensions":"/src/assets/products/outdoor/product-dimensions.webp"
         },
         { 
             "id": 4,
@@ -78,7 +81,8 @@
             "subtitle2a": "Bent plywood construction",
             "subtext2a": "Built with sustainably-sourced hardwoods and single sheets of bent plywood",
             "subtitle2b": "Reinforced steel hardware",
-            "subtext2b": "As rigid and stable as a traditional fixed-width construction"
+            "subtext2b": "As rigid and stable as a traditional fixed-width construction",
+            "productDimensions":"/src/assets/products/bedroom/product-dimensions.webp"
         },
         { 
             "id": 5,
@@ -98,7 +102,8 @@
             "subtitle2a": "Easy to move",
             "subtext2a": "Take it apart for easy transport",
             "subtitle2b": "Hardware included",
-            "subtext2b": "Parts and hardware are packed in the same box"
+            "subtext2b": "Parts and hardware are packed in the same box",
+            "productDimensions":"/src/assets/products/storage/product-dimensions.webp"
         },
         { 
             "id": 6,

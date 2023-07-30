@@ -8,33 +8,43 @@ import ProductVideoText from "./ProductVideoText";
 import { useParams } from "react-router-dom";
 import React, { useContext, useState } from "react";
 import { ContextApi } from "../../../ContextApi/ContextApi";
+import useChoosenProduct from "../../../customHooks/useChoosenProduct";
 
 const ProductVideos = () => {
 
-    const { id } = useParams();
-    console.log(id); 
+    const { matchingCategory } = useChoosenProduct();
+    
 
-    const { products, categories } = useContext(ContextApi);
+    // const { id } = useParams();
+    // console.log(id); 
 
-    const choosenProduct = products.find(
-        (product) => product.id === parseInt(id)
-    );
-    //console.log(choosenProduct);
+    // const { products, categories } = useContext(ContextApi);
 
-    const productCategory = choosenProduct?.categoryName;
-    console.log(productCategory);
+    // const choosenProduct = products.find(
+    //     (product) => product.id === parseInt(id)
+    // );
+    // //console.log(choosenProduct);
 
-    const matchingCategory = categories.find(
-        (category) => category.categoryName === productCategory
-    );
-    console.log(matchingCategory);
+    // const productCategory = choosenProduct?.categoryName;
+    // console.log(productCategory);
+
+    // const matchingCategory = categories.find(
+    //     (category) => category.categoryName === productCategory
+    // );
+    // console.log(matchingCategory);
+
+    // const categoryVideo1Src = matchingCategory?.categoryVideo1;
+    // const categoryVideo2Src = matchingCategory?.categoryVideo2;
+    // console.log(categoryVideo1Src);
+    // console.log(categoryVideo2Src);
+    //ISTO NÃO ESTÁ A FUNCIONAR!!!
 
     return (
         <section className={"container"}>
             <div className={`${"row"} ${"videos"}`}>
             <div className={"col-lg-6"}>
                     <video className={"product-video"} muted autoPlay loop>
-                        <source src="/src/assets/videos/product-video-seating-1.mp4"/>
+                        <source src={"/src/assets/videos/product-video-seating-1.mp4"}/>
                         {/* quando uso {matchingCategory?.categoryVideo1} o vídeo deixa de aparecer, deve ter que ver com o tempo que o fetch da context api demora - RESOLVER*/}
                     </video>
                 </div>

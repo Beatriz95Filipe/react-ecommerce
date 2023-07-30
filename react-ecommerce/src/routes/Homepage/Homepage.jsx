@@ -9,6 +9,8 @@ import Info from "../../components/Homepage/Info/Info";
 import ShopSpaces from "../../components/Homepage/ShopSpaces/ShopSpaces";
 import Featured from "../../components/Homepage/Featured/Featured";
 
+import { Link } from "react-router-dom";
+
 const HomePage = () => {
   return (
     <>
@@ -18,13 +20,15 @@ const HomePage = () => {
       <ShopSpaces />
       <Featured />
       <section className={"container--fluid"}>
-          <p className={"slogan"}>Modular, easy-to-move design</p>
-          <video className={"home-video"} muted autoPlay loop>
-              <source src="/src/assets/videos/background-video-home.mp4" />
-          </video>
-          <div className={"row"}>
-              <button className={"btn__shop"}>SHOP SEATING</button>
-          </div>
+        <p className={"slogan"}>Modular, easy-to-move design</p>
+        <video className={"home-video"} muted autoPlay loop>
+          <source src="/src/assets/videos/background-video-home.mp4" />
+        </video>
+        <div className={"row"}>
+          <Link to="/category/Seating">
+            <button className={"btn__shop"}>SHOP SEATING</button>
+          </Link>
+        </div>
       </section>
     </>
   );

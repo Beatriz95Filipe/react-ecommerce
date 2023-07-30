@@ -10,6 +10,7 @@ import "/src/shared/_buttons.scss";
 import { useParams } from "react-router-dom";
 import React, { useContext, useState } from "react";
 import { ContextApi } from "../../../ContextApi/ContextApi";
+import useChoosenProduct from "../../../customHooks/useChoosenProduct";
 
 import ChoosenColor from "./ChoosenColor";
 import ChoosenProductSeating from "./ChoosenProductSeating";
@@ -17,14 +18,15 @@ import ProductCounter from "./ProductCounter";
 
 const ChoosenProduct = () => {
 
-    const { id } = useParams();
-    console.log(id); 
+    const { choosenProduct } = useChoosenProduct();
+    // const { id } = useParams();
+    // console.log(id); 
 
-    const { products } = useContext(ContextApi);
+    // const { products } = useContext(ContextApi);
 
-    const choosenProduct = products.find(
-        (product) => product.id === parseInt(id)
-    );
+    // const choosenProduct = products.find(
+    //     (product) => product.id === parseInt(id)
+    // );
     //console.log(choosenProduct);
 
     //prevent default page refresh - acções dentro do <form>
@@ -37,12 +39,12 @@ const ChoosenProduct = () => {
 
     const handleProductQuantityChange = (newQuantity) => {
         setProductQuantity(newQuantity);
-    };
+    }; //passar o useState do selectedColor para aqui de forma a conseguir ter a selectedColor neste componente
 
     const productToCart = {
         product: choosenProduct?.name,
         quantity: productQuantity
-    };
+    }; 
 
     let getcurrentDate = new Date();
     let getDay = getcurrentDate.getDate();
@@ -58,11 +60,12 @@ const ChoosenProduct = () => {
         userId: userId,
         date: currentDate,
         products: [productToCart]
-    }
+    } //alterar para tbm passar a selected color
 
     //acção add to cart
     const handleAddToCart = () => {
         console.log(addToCartData);
+        alert("Product added to cart!");
     }; // colocar a lógica do cart info neste handler - fazer fetch com method: PUT (update) para enviar para uma database
 
 

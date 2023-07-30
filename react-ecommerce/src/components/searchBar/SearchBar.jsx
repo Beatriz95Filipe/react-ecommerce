@@ -9,6 +9,7 @@ import useFetchCategories from "../../customHooks-notUsed/useFetchCategories";
 import useFetchProducts from "../../customHooks-notUsed/useFetchProductsByCategory";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
+//MUDAR PARA A CONTEXT API
 
 const SearchBar = () => {
 

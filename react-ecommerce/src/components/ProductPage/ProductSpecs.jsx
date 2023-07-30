@@ -8,10 +8,17 @@ import "/src/shared/_colors.scss";
 import "/src/shared/_thumbnails.scss";
 import "/src/shared/_buttons.scss";
 
+import useChoosenProduct from "../../customHooks/useChoosenProduct";
 
-const ProductSpecs = ({ imgSrc }) => {
-  return (
-    <section className={"container"}>
+
+const ProductSpecs = () => {
+
+    const { matchingCategory } = useChoosenProduct();
+    const productDimensions = matchingCategory?.productDimensions;
+    console.log(productDimensions);
+
+    return (
+        <section className={"container"}>
             <p className={"about__title"}>Specifications</p>
             <div className={`${"row"} ${style.dimensions}`}>
                 <div className={style["col-lg-5"]}>
@@ -51,13 +58,14 @@ const ProductSpecs = ({ imgSrc }) => {
                             </tr>
                         </tbody>
                     </table>
+                    {/* criar tabela para cada categoria ou produto */}
                 </div>
                 <div className={style["col-lg-7"]}>
-                    <img src={imgSrc} alt="product-dimensions" />
+                    <img src={productDimensions} alt="product-dimensions" />
                 </div>
             </div>
         </section>
-  );
+    );
 };
 
 export default ProductSpecs;

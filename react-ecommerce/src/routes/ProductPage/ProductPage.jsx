@@ -5,13 +5,12 @@ import ProductKeyFeatures from "../../components/ProductPage/ProductKeyFeatures/
 import ProductVideos from "../../components/ProductPage/ProductVideos/ProductVideos.jsx";
 import RelatedProducts from "../../components/ProductPage/RelatedProducts/RelatedProducts";
 
+
 const ProductPage = () => {
   return (
     <>
       <ChoosenProduct />
-      <ProductSpecs
-        imgSrc="/src/assets/products/seating/product-dimensions.png"
-      />
+      <ProductSpecs />
       <ProductAbout />
       <ProductKeyFeatures />
       <ProductVideos />
